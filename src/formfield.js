@@ -9,11 +9,11 @@ class Form extends Component {
   TakeDateOfDescription = (e) => {
     this.setState({ dateOfExpence: e.target.value });
   };
-  TakeUserSpentAmount(e) {
+  TakeUserSpentAmount = (e)=> {
     this.setState({ userSpentAmount: e.target.value });
   }
   UserExpenceDesctiption = (e) => {
-    this.setState({ itemDescription: e.target.string });
+    this.setState({ itemDescription: e.target.value });
   };
   UserOccurenceOfExpence = (e) => {
     this.setState({ whereExpenceOccured: e.target.value });
