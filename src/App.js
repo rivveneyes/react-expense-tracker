@@ -8,16 +8,15 @@ class App extends Component {
   //     {
   //       name: "Charlie",
   //       job: "Janitor",
-  //     },      
-  //     {   
+  //     },
+  //     {
   //       name: "Mac",
   //       job: "Bouncer",
-  //     },  
-  //     { 
+  //     },
+  //     {
   //       name: "Dee",
   //       job: "Aspring actress",
   //       },
-
 
   //     {
   //       name: "Dennis",
@@ -26,13 +25,13 @@ class App extends Component {
   //   ],
   // };
   render() {
-    return(
-    <div className="container"> 
-     <h1 className="text-center"> Expence-trakcer</h1> 
-    
-    <Form />
-    </div>)
-    
+    return (
+      <div className="container">
+        <h1 className="text-center"> Expence-trakcer</h1>
+
+        <Form />
+      </div>
+    );
   }
-}   
+}
 export default App;
