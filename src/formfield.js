@@ -1,48 +1,35 @@
 import React, { Component } from "react";
+
 class Form extends Component {
-  state = {
-    dateOfExpence: "",
-    userSpentAmount: 0,
-    itemDescription: "",
-    whereExpenceOccured: "",
-  };
-  TakeDateOfDescription = (e) => {
-    this.setState({ dateOfExpence: e.target.value });
-  };
-  TakeUserSpentAmount = (e)=> {
-    this.setState({ userSpentAmount: e.target.value });
-  }
-  UserExpenceDesctiption = (e) => {
-    this.setState({ itemDescription: e.target.value });
-  };
-  UserOccurenceOfExpence = (e) => {
-    this.setState({ whereExpenceOccured: e.target.value });
-  };
 
   render() {
     return (
-      <form>
+      <div>
         <input
+        id="date"
           type="date"
-          value={this.state.dateOfExpence}
-          onChange={this.TakeDateOfDescription}
+          value={this.props.data.dateOfExpence}
+          onChange={this.props.change}
         />
         <input
+          id="spentAmount"
           type="number"
-          value={this.state.userSpentAmount}
-          onChange={this.TakeUserSpentAmount}
+          value={this.props.data.userSpentAmount}
+          onChange={this.props.change}
         />
         <input
+          id="description"
           type="text"
-          value={this.state.itemDescription}
-          onChange={this.UserExpenceDesctiption}
+          value={this.props.data.itemDescription}
+          onChange={this.props.change}
         />
         <input
+          id="expenceDetail"
           type="text"
-          value={this.state.whereExpenceOccured}
-          onChange={this.UserOccurenceOfExpence}
+          value={this.props.data.whereExpenceOccured}
+          onChange={this.props.change}
         />
-      </form>
+      </div>
     );
   }
 }
