@@ -2,9 +2,8 @@ import React, { Component } from "react";
 
 
 export default class Table extends Component {
-    
 
-render(){
+    render(){
     return(
         <table>
             <thead>
@@ -16,12 +15,24 @@ render(){
             </tr>          
             </thead>
             <tbody>
-            <tr>
-              <td>{this.props.userData.itemDescription}</td>  
-              <td>data2</td>  
-              <td>data3</td>  
-              <td>data4</td>  
-            </tr>   
+            
+               
+    {this.props.userData.map((pruchase,index)=>(
+        
+        <tr key={index}>
+        <td >{pruchase.date}</td>
+        <td >{pruchase.amount}</td>
+        <td >{pruchase.description}</td>
+        <td >{pruchase.expenceOccred}</td>
+        </tr>
+    ))}
+    
+            {/* <td>{this.props.userData.userSpentAmount}</td>
+        <td>{this.props.userData.itemDescription}</td> 
+        <td>{this.props.userData.whereExpenceOccured}</td>,
+        <td>{this.props.userData.dateOfExpence}</td>
+          */}
+ 
             </tbody>    
     </table>
     )
