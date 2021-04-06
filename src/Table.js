@@ -14,7 +14,7 @@ export default class Table extends Component {
         </thead>
         <tbody>
           {this.props.userData.map((pruchase, index) => (
-            <tr key={pruchase.itemDescription}>
+            <tr key={pruchase.index}>
               <td>{pruchase.dateOfExpence}</td>
               <td>{pruchase.userSpentAmount}</td>
               <td>{pruchase.itemDescription}</td>
