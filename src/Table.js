@@ -3,18 +3,18 @@ import React, { Component } from "react";
 export default class Table extends Component {
   render() {
     return (
-      <table>
+      <table className="table table-striped">
         <thead>
-          <tr>
+          <tr className="Dark">
             <th>date</th>
-            <th>type</th>
             <th>amount</th>
+            <th>location of purchase</th>
             <th>item details</th>
           </tr>
         </thead>
         <tbody>
           {this.props.userData.map((pruchase, index) => (
-            <tr key={pruchase.index}>
+            <tr key={index}>
               <td>{pruchase.dateOfExpence}</td>
               <td>{pruchase.userSpentAmount}</td>
               <td>{pruchase.itemDescription}</td>
