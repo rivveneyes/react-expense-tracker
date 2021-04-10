@@ -1,6 +1,18 @@
 import React, { Component } from "react";
 
 export default class Table extends Component {
+  reformatDate = (date) => {
+    let year = date.slice(0, 4);
+    year = date.slice(5, 10) + "-" + year;
+    return year;
+  };
+
+  stringToNumber = (string) => {
+    let newNum = parseFloat(string);
+    newNum = "$" + newNum.toFixed(2);
+    return newNum;
+  };
+
   render() {
     return (
       <table className="table table-striped">
@@ -15,8 +27,8 @@ export default class Table extends Component {
         <tbody>
           {this.props.userData.map((pruchase, index) => (
             <tr key={index}>
-              <td>{pruchase.dateOfExpence.slice(5,10)+`-${pruchase.dateOfExpence.slice(0,4)}`}</td>
-              <td>{pruchase.userSpentAmount}</td>
+              <td>{this.reformatDate(pruchase.dateOfExpence)}</td>
+              <td>{this.stringToNumber(pruchase.userSpentAmount)}</td>
               <td>{pruchase.itemDescription}</td>
               <td>{pruchase.whereExpenceOccured}</td>
               <td>

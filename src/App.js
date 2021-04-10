@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Form from "./formfield";
+import Form from "./Formfield";
 import Table from "./Table";
 
 class App extends Component {
@@ -12,9 +12,8 @@ class App extends Component {
   };
   onUserInput = (e) => {
     switch (e.target.id) {
-      case "date":     
-        this.setState({ dateOfExpence: e.target.value});
-
+      case "date":
+        this.setState({ dateOfExpence: e.target.value });
 
         // this.setState({dateOfExpence: e.target.value })
         break;
@@ -35,7 +34,7 @@ class App extends Component {
   handleInput = (date, amount, description, expenceOccred, checkbox) => {
     date === ""
       ? alert("please enter date")
-      : amount <=0
+      : amount <= 0
       ? alert("please enter amount over $0.00")
       : description === ""
       ? alert("please enter description")
