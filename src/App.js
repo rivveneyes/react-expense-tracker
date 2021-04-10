@@ -12,8 +12,10 @@ class App extends Component {
   };
   onUserInput = (e) => {
     switch (e.target.id) {
-      case "date":
-        this.setState({ dateOfExpence: e.target.value });
+      case "date":     
+        this.setState({ dateOfExpence: e.target.value});
+
+
         // this.setState({dateOfExpence: e.target.value })
         break;
       case "spentAmount":
@@ -33,8 +35,8 @@ class App extends Component {
   handleInput = (date, amount, description, expenceOccred, checkbox) => {
     date === ""
       ? alert("please enter date")
-      : amount === 0
-      ? alert("please enter amount")
+      : amount <=0
+      ? alert("please enter amount over $0.00")
       : description === ""
       ? alert("please enter description")
       : expenceOccred === ""

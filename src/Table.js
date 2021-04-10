@@ -9,13 +9,13 @@ export default class Table extends Component {
             <th>date</th>
             <th>amount</th>
             <th>location of purchase</th>
-            <th>item details</th>
+            <th>expence description</th>
           </tr>
         </thead>
         <tbody>
           {this.props.userData.map((pruchase, index) => (
             <tr key={index}>
-              <td>{pruchase.dateOfExpence}</td>
+              <td>{pruchase.dateOfExpence.slice(5,10)+`-${pruchase.dateOfExpence.slice(0,4)}`}</td>
               <td>{pruchase.userSpentAmount}</td>
               <td>{pruchase.itemDescription}</td>
               <td>{pruchase.whereExpenceOccured}</td>
