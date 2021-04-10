@@ -90,7 +90,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="text-center"> Expence-trakcer</h1>
+        <h1 className="text-center"> Expence-tracker</h1>
         <Form
           data={this.state}
           change={this.onUserInput}
@@ -104,3 +104,4 @@ class App extends Component {
 }
 
 export default App;
+  
